@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "course_title": "Introduction to Programming",
+      "course_description": "Learn the basics of programming with this introductory course.",
+      "price": 49.99,
+      "credit_hour": 3,
+      "cover_img": "https://example.com/course1.jpg"
+    },
+    {
+      "id": 2,
+      "course_title": "Web Development Fundamentals",
+      "course_description": "Get started with web development and build your first website.",
+      "price": 79.99,
+      "credit_hour": 4,
+      "cover_img": "https://example.com/course2.jpg"
+    },
+    {
+      "id": 3,
+      "course_title": "Data Science Essentials",
+      "course_description": "Explore the world of data science and analytics.",
+      "price": 99.99,
+      "credit_hour": 5,
+      "cover_img": "https://example.com/course3.jpg"
+    },
+    {
+      "id": 4,
+      "course_title": "Mobile App Development",
+      "course_description": "Learn to develop mobile apps for iOS and Android.",
+      "price": 89.99,
+      "credit_hour": 4,
+      "cover_img": "https://example.com/course4.jpg"
+    },
+    {
+      "id": 5,
+      "course_title": "Machine Learning Masterclass",
+      "course_description": "Dive deep into machine learning and artificial intelligence.",
+      "price": 129.99,
+      "credit_hour": 6,
+      "cover_img": "https://example.com/course5.jpg"
+    },
+    {
+      "id": 6,
+      "course_title": "Front-end Web Development",
+      "course_description": "Master the art of creating interactive web interfaces.",
+      "price": 69.99,
+      "credit_hour": 4,
+      "cover_img": "https://example.com/course6.jpg"
+    },
+    {
+      "id": 7,
+      "course_title": "Backend Development with Node.js",
+      "course_description": "Build scalable and efficient backend systems using Node.js.",
+      "price": 79.99,
+      "credit_hour": 4,
+      "cover_img": "https://example.com/course7.jpg"
+    },
+    {
+      "id": 8,
+      "course_title": "Full Stack Web Development",
+      "course_description": "Become a full-stack developer and work on both front-end and back-end.",
+      "price": 149.99,
+      "credit_hour": 8,
+      "cover_img": "https://example.com/course8.jpg"
+    },
+    {
+      "id": 9,
+      "course_title": "UI/UX Design Principles",
+      "course_description": "Design user-friendly interfaces and create outstanding user experiences.",
+      "price": 59.99,
+      "credit_hour": 3,
+      "cover_img": "https://example.com/course9.jpg"
+    }
+  ]
+  
