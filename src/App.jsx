@@ -28,6 +28,14 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      {/* daisy ui button */}
+      {/* <button class="btn btn-neutral">Neutral</button> */}
+
+
+
+
+      
+
     </>
   )
 }
