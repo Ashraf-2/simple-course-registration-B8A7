@@ -7,7 +7,7 @@ const Cart = ({selectedCourse}) => {
     // console.log("inside cart - ", {course_title});
     // console.log(selectedCourse);
     return (
-        <div className="bg-[#FFF] mx-5 py-2 pl-5 rounded-xl">
+        <div className="bg-[#FFF] py-2 pl-5 rounded-xl">
             <h1 className="text-[#2F80ED] text-lg mb-4 font-bold">Credit Hour Remaining 7 hr</h1>
             {/* <p className=" border-b-2 mr-28 "></p> */}
             <hr className="border-b-2 mr-24 mb-2" />

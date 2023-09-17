@@ -30,7 +30,7 @@ const Home = () => {
     return (
         <div>
             <h1 className="text-center text-3xl font-bold">Course Registration</h1>
-            <div className="flex flex-col md:flex-row mt-5">
+            <div className="flex flex-col md:flex-row mt-5 gap-5">
                 <div className="w-full md:w-2/3 ">
                     <div className="card-container grid md:grid-cols-3 gap-3">
                         {
