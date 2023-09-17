@@ -23,12 +23,12 @@ const Home = () => {
                                 // <p>{actor.id}</p>
                                 <div key={course.id}>
                                     
-                                    <div className="card card-compact bg-base-100 shadow-xl">
-                                        <img className="md:h-36" src={course.cover_img} alt={course.course_title} />
-                                        <div className="card-body">
-                                            <h2 className="font-bold text-base">{course.course_title}</h2>
-                                            <p>{course.course_description.slice(0,80)}..</p>
-                                            <div className="text-center w-full">
+                                    <div className="bg-base-100 shadow-xl p-2 rounded-xl">
+                                        <img className="w-full md:h-36 p-0 m-0" src={course.cover_img} alt={course.course_title} />
+                                        <div className="py-2 ">
+                                            <h2 className="font-bold text-base py-1">{course.course_title}</h2>
+                                            <p className="py-1">{course.course_description.slice(0,80)}..</p>
+                                            <div className="text-center w-full pt-1">
                                                 <button className="btn btn-primary w-full">Select</button>
                                             </div>
                                         </div>
@@ -47,7 +47,7 @@ const Home = () => {
 
                     </div>
                 </div>
-                <div className="w-full md:w-1/3 cart-section bg-gray-200 w-1/3">
+                <div className="w-full md:w-1/3 cart-section bg-gray-200">
                     <h1>carts</h1>
 
                 </div>
