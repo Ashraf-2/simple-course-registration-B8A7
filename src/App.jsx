@@ -8,18 +8,13 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className="bg-[#F3F3F3] py-5 px-8">
       <Home></Home>
       
       {/* daisy ui button */}
       {/* <button class="btn btn-neutral">Neutral</button> */}
 
-
-
-
-      
-
-    </>
+    </div>
   )
 }
 

@@ -1,11 +1,16 @@
+/* eslint-disable react/jsx-no-undef */
 import { useEffect, useState } from "react";
 // import { BsBook } from 'react-icons/fa';
+import Cart from "../Cart/Cart";
 
 
 
 const Home = () => {
 
     const [courses, setCourses] = useState([]);
+    const [selectedCourse, setSelectedCourse] = useState([]);
+
+    
 
     useEffect(() => {
         fetch('Courses.json')
@@ -14,12 +19,19 @@ const Home = () => {
             .then(data => setCourses(data))
     })
     // console.log("courses: ", courses);
+    const handleSelectCourse = (course) => {
+        console.log(course);
+        setSelectedCourse([...selectedCourse, course]);
+    }
+
+
+
+
     return (
         <div>
             <h1 className="text-center text-3xl font-bold">Course Registration</h1>
-            <div className="flex flex-col md:flex-row ">
-                <div className="w-full md:w-2/3 bg-gray-300">
-                    <h1>courses</h1>
+            <div className="flex flex-col md:flex-row mt-5">
+                <div className="w-full md:w-2/3 ">
                     <div className="card-container grid md:grid-cols-3 gap-3">
                         {
                             courses.map((course) => (
@@ -38,7 +50,7 @@ const Home = () => {
                                                 {/* <p> <BsBook/>Credit: {course.credit_hour}</p> */}
                                             </div>
                                             <div className="text-center w-full pt-4">
-                                                <button className="btn btn-primary w-full">Select</button>
+                                                <button onClick={() => handleSelectCourse(course)} className="btn btn-primary w-full">Select</button>
                                             </div>
                                         </div>
                                     </div>
@@ -49,8 +61,9 @@ const Home = () => {
 
                     </div>
                 </div>
-                <div className="w-full md:w-1/3 cart-section bg-gray-200">
-                    <h1>carts</h1>
+                
+                <div className="w-full md:w-1/3">
+                    <Cart key={selectedCourse.id} selectedCourse={selectedCourse}></Cart>
 
                 </div>
             </div>
