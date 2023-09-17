@@ -2,9 +2,9 @@
     {
       "id": 1,
       "course_title": "Introduction to C Programming",
-      "course_description": "Learn the basics of programming with this introductory course.",
+      "course_description": "Learn the basics of programming with this introductory course.It will give you beasic understanding of programming language and how it intereact with hardware.We will explore a framework of c language.",
       "price": 49.99,
-      "credit_hour": 3,
+      "credit_hour": 1,
       "cover_img": "https://i.ibb.co/PcZgpg8/Rectangle-2-2.png"
     },
     {
@@ -12,7 +12,7 @@
       "course_title": "Introduction to Algorithms",
       "course_description": "Explore the fundamental principles of algorithm design and analysis. Learn to solve computational problems efficiently, covering algorithmic paradigms, data structures, and algorithmic thinking",
       "price": 79.99,
-      "credit_hour": 4,
+      "credit_hour": 2,
       "cover_img": "https://i.ibb.co/F4KhYcF/Rectangle-2-3.png"
     },
     {
@@ -20,7 +20,7 @@
       "course_title": "Introduction to C++ for DSA",
       "course_description": "Learn the C++ programming language and its application in Data Structures and Algorithms (DSA).Develop coding skills for problem-solving, data manipulation, and algorithm implementation using C++.",
       "price": 99.99,
-      "credit_hour": 5,
+      "credit_hour": 8,
       "cover_img": "https://i.ibb.co/WF1rJs3/Rectangle-2-4.png"
     },
     {
@@ -44,7 +44,7 @@
       "course_title": "Software Engineering",
       "course_description": "This comprehensive course in Software Engineering equips students with the knowledge and skills needed to develop high-quality software systems. ",
       "price": 69.99,
-      "credit_hour": 4,
+      "credit_hour": 3,
       "cover_img": "https://i.ibb.co/TPz5mwK/Rectangle-2-5.png"
     },
     {
@@ -52,7 +52,7 @@
       "course_title": "AWS, Cloud Computing",
       "course_description": "This course provides a comprehensive introduction to Amazon Web Services (AWS) and the fundamentals of cloud computing. Students will learn to harness the power of AWS services for building scalable, reliable, and cost-effective cloud solutions.",
       "price": 79.99,
-      "credit_hour": 4,
+      "credit_hour": 6,
       "cover_img": "https://i.ibb.co/MRZmSXF/Rectangle-3-1.png"
     },
     {
@@ -60,7 +60,7 @@
       "course_title": "Database (MySQL)",
       "course_description": "Delve into the world of relational databases with a focus on MySQL. This course provides a solid foundation in database management, covering data modeling, querying, and administration using MySQL.",
       "price": 149.99,
-      "credit_hour": 8,
+      "credit_hour": 5,
       "cover_img": "https://i.ibb.co/Vmdd7Bm/Rectangle-2-1.png"
     },
     {
