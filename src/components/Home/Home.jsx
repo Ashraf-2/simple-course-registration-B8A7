@@ -45,16 +45,30 @@ const Home = () => {
             BudgetHour = BudgetHour-consumedHour;
             console.log("BudgetHour: ",BudgetHour);
             console.log("consumed hour: ",consumedHour);
-            if(consumedHour>20){
-                return swal("Good Luck!","You purchases All the course Successfully!","success");
-            }
-            else{
+            if(consumedHour<20){
                 setSelectedCourse([...selectedCourse, course]);
 
                 setTotalPrice(price);
                 setRemainingHr(BudgetHour);
                 setTotalCrHr(consumedHour);
             }
+            if(consumedHour === 20)
+            {
+                setSelectedCourse([...selectedCourse, course]);
+
+                setTotalPrice(price);
+                setRemainingHr(BudgetHour);
+                setTotalCrHr(consumedHour);
+
+                return swal("Good Luck!","You purchases All the course Successfully!","success");
+
+            }
+            else if(consumedHour>20){
+                return swal("Sorry!","You can't purchase more than 20 credit hour.","error");
+            }
+            // else{
+                
+            // }
         
 
         }
