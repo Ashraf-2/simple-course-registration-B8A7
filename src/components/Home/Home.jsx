@@ -1,7 +1,10 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-undef */
 import { useEffect, useState } from "react";
-// import { BsBook } from 'react-icons/fa';
+import { BsBook } from 'react-icons/bs';
 import Cart from "../Cart/Cart";
+import swal from 'sweetalert';
+    
 
 
 
@@ -9,7 +12,10 @@ const Home = () => {
 
     const [courses, setCourses] = useState([]);
     const [selectedCourse, setSelectedCourse] = useState([]);
-
+    const [totalPrice, setTotalPrice] = useState(0);
+    const [remainingCrHr,setRemainingHr] = useState(20);
+    const [totalCrHr,setTotalCrHr] = useState(0);
+    let BudgetHour = 20;
     
 
     useEffect(() => {
@@ -21,7 +27,38 @@ const Home = () => {
     // console.log("courses: ", courses);
     const handleSelectCourse = (course) => {
         console.log(course);
-        setSelectedCourse([...selectedCourse, course]);
+        const isExist = selectedCourse.find((crs) => crs.id === course.id);
+        let price = course?.price;    
+        let consumedHour = course.credit_hour;   
+
+        if(isExist){
+            // return alert("already selected,try another course");
+            return swal("Sorry!","You already selected this course", "error");
+
+        }
+        else{
+            selectedCourse.forEach((item) =>{
+                price += item.price;
+                // BudgetHour = BudgetHour-item.credit_hour;
+                consumedHour = consumedHour+item.credit_hour;
+            });
+            BudgetHour = BudgetHour-consumedHour;
+            console.log("BudgetHour: ",BudgetHour);
+            console.log("consumed hour: ",consumedHour);
+            if(consumedHour>20){
+                return swal("Good Luck!","You purchases All the course Successfully!","success");
+            }
+            else{
+                setSelectedCourse([...selectedCourse, course]);
+
+                setTotalPrice(price);
+                setRemainingHr(BudgetHour);
+                setTotalCrHr(consumedHour);
+            }
+        
+
+        }
+
     }
 
 
@@ -44,9 +81,9 @@ const Home = () => {
                                             <h2 className="font-bold text-base pt-2">{course.course_title}</h2>
                                             <p title={course.course_description} className="py-1 text-[#1c1b1b99]">{course.course_description.slice(0,80)}..</p>
                                             {/* <p className="py-1 h-20 overflow-hidden text-[#1c1b1b99]">{course.course_description}</p> */}
-                                            <div className="flex flex-row justify-between">
+                                            <div className="flex justify-between">
                                                 <p> <i className="fa-solid fa-dollar-sign"></i> <span className="text-[#1c1b1b99]"> Price: {course.price}</span></p>
-                                                <p><i className="fa-regular fa-book-open"></i> <span className="text-[#1c1b1b99]"> Credit: {course.credit_hour}</span></p>
+                                                <p className="flex items-center gap-2"><BsBook></BsBook> <span className="text-[#1c1b1b99]"> Credit: {course.credit_hour}</span></p>
                                                 {/* <p> <BsBook/>Credit: {course.credit_hour}</p> */}
                                             </div>
                                             <div className="text-center w-full pt-4">
@@ -63,7 +100,15 @@ const Home = () => {
                 </div>
                 
                 <div className="w-full md:w-1/3">
-                    <Cart key={selectedCourse.id} selectedCourse={selectedCourse}></Cart>
+                    <Cart key={selectedCourse.id} 
+                    selectedCourse={selectedCourse}
+                    totalPrice={totalPrice}
+                    remainingCrHr={remainingCrHr}
+                    totalCrHr={totalCrHr}
+
+                    >
+
+                    </Cart>
 
                 </div>
             </div>
